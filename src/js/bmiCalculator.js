@@ -1,13 +1,13 @@
 class BMICalculator{
   calculateMetric(options) {
-    const weight = options.weight
-    const height = options.height
-    const bmiValue = (weight / (height * height)).toFixed(2)
+    const weight = options.weight;
+    const height = options.height;
+    const bmiValue = (weight / (height * height)).toFixed(2);
     const bmiResults = {
       value: parseFloat(bmiValue),
       classification: this.getBMIClassification(parseFloat(bmiValue))
     }
-    return  bmiResults
+    return  bmiResults;
   }
 
   getBMIClassification(value){
@@ -26,6 +26,7 @@ class BMICalculator{
     }
   }
 }
-if (window?.module){
+
+if (typeof module !== 'undefined' && module.exports){
  module.exports = BMICalculator
 }
